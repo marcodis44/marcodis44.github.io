@@ -27,9 +27,11 @@ export interface ContactInfoProps {
   email: HeaderProp;
   phone: HeaderProp;
   language: LanguagePropsElem;
+  personalInfo: string;
+  professionalExp: string;
 }
 
 export interface AppState {
-  darkMode: boolean;
+  isDarkMode: boolean;
   contactInfo: ContactInfoProps;
 }

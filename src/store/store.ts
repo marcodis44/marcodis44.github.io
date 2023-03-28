@@ -12,7 +12,7 @@ import itFlag from "../assets/it 2.svg";
 import gbFlag from "../assets/gb 2.svg";
 
 const initialState: AppState = {
-  darkMode: true,
+  isDarkMode: true,
   contactInfo: {
     name: "Marco",
     surname: "Dispoto",
@@ -57,6 +57,11 @@ const initialState: AppState = {
         altText: "uk flag",
       },
     },
+    personalInfo:
+      "I'm a web developer with 2+ years of experience in web-app development. I'm quite curious and dynamic,and I'd like to specialize in front-end development. In the last couple of months I have had the opportunity to get to know and use ReactJS with RTK, Styled-Components and TailwindCSS but I also have a good grasp on Bootstrap.",
+    professionalExp: `<h3 className='font-bold'>Web Developer</h3>\n
+      The Digital Box S.p.A.\n
+      09/2020 - current`,
   },
 };
 
@@ -65,7 +70,7 @@ const appSlice = createSlice({
   initialState,
   reducers: {
     toggleDarkMode(state) {
-      state.darkMode = !state.darkMode;
+      state.isDarkMode = !state.isDarkMode;
     },
   },
 });

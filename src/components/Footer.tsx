@@ -8,11 +8,11 @@ const Footer = () => {
   } = useSelector((state: AppState) => state);
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center text-center lg:justify-around lg:items-center py-4">
-      <div className="w-full lg:w-1/3">
+    <div className="flex flex-col lg:flex-row items-center py-4 w-fit mx-auto">
+      <div>
         <ContactDetail props={{ ...email }} />
       </div>
-      <div className="w-full lg:w-1/3 pt-4 lg:pt-0">
+      <div className="pt-4 lg:pt-0">
         <ContactDetail props={{ ...phone }} />
       </div>
     </div>

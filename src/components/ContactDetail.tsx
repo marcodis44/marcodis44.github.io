@@ -14,7 +14,7 @@ const ContactDetail = ({ props }: { props: HeaderProp }) => {
     );
   };
 
-  const outerCn = "flex mt-3 w-1/2 md:w-full";
+  const outerCn = "flex mt-3 md:w-full";
   return props.wrapElement === "a" ? (
     <a href={`${props.action}:${props.value}`} className={`${outerCn}`}>
       {getChildren()}

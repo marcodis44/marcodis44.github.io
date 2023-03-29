@@ -17,7 +17,7 @@ const AppContainer = () => {
   return (
     <div className={`w-screen ${isDarkMode ? "dark" : ""}`}>
       <div className="bg-light dark:bg-tblue">
-        <div className={`w-3/4 mx-auto`}>
+        <div className={`w-full lg:w-3/4 mx-auto p-10 lg:p-0`}>
           <Header onToggleDarkMode={toggleDarkMode} />
           <hr className="border-tblue dark:border-light" />
           <CvBody />

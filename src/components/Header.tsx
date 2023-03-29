@@ -20,7 +20,6 @@ const Header = ({ onToggleDarkMode }: { onToggleDarkMode: () => void }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleSwitchLanguage = (lang: string) => {
-    console.log(`Language is ${language}. Switching to ${lang}`);
     dispatch(actions.switchLanguage(lang));
   };
 

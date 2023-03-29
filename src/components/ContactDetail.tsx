@@ -2,8 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { HeaderProp } from "../types/types";
 
 const ContactDetail = ({ props }: { props: HeaderProp }) => {
-  console.log(props);
-
   const getChildren = () => {
     return (
       <div className="flex items-center">

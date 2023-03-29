@@ -17,7 +17,10 @@ export const ContactInfo = () => {
       </div>
       <div className="flex flex-row lg:flex-col mt-7 lg:self-end lg:mt-0 w-full justify-around ">
         {Object.values(contactInfo.language).map((lang, i) => (
-          <div className={`flex items-center ${i % 2 !== 0 && "lg:mt-3"}`}>
+          <div
+            className={`flex items-center ${i % 2 !== 0 && "lg:mt-3"}`}
+            key={i}
+          >
             <img
               src={lang.flag}
               alt={lang.altText}

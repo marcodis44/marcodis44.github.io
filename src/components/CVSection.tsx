@@ -5,16 +5,16 @@ interface CvSectionProps {
   children: ReactNode;
 }
 
-const CVSection = (props: CvSectionProps) => {
+const CvSection = (props: CvSectionProps) => {
   return (
-    <div className="w-full lg:w-1/2 p-3 lg:p-10">
-      <h3 className="text-tblue dark:text-light text-xl font-bold">
+    <div className="w-full p-3 lg:p-10">
+      <h3 className="text-tblue dark:text-light text-2xl font-bold">
         {props.title}
       </h3>
-      <hr className="w-1/2 border-2 border-light" />
+      <hr className="w-1/2 border-2 dark:border-light border-tblue" />
       <div className="pt-3">{props.children}</div>
     </div>
   );
 };
 
-export default CVSection;
+export default CvSection;

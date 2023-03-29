@@ -18,6 +18,19 @@ export interface LanguagePropsElem {
   [key: string]: LanguageProps;
 }
 
+export interface ProfessionalExpProps {
+  title: string;
+  fromTo: string;
+  employer: string;
+  responsibilities: string[];
+}
+
+export interface EduProps {
+  school: string;
+  date: string;
+  description?: string;
+}
+
 export interface ContactInfoProps {
   name: string;
   surname: string;
@@ -28,7 +41,10 @@ export interface ContactInfoProps {
   phone: HeaderProp;
   language: LanguagePropsElem;
   personalInfo: string;
-  professionalExp: string;
+  professionalExp: ProfessionalExpProps[];
+  skills: string[];
+  courses: EduProps[];
+  education: EduProps[];
 }
 
 export interface AppState {

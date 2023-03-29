@@ -11,14 +11,14 @@ const Header = ({ onToggleDarkMode }: { onToggleDarkMode: () => void }) => {
   const { isDarkMode } = useSelector((state: AppState) => state);
 
   return (
-    <div className="py-0 lg:py-5">
-      <div className="py-5 lg:py-10 px-0 mx-auto lg:px-20 transition-all 1s ease-in-out">
-        <div className="flex flex-col lg:flex-row w-full items-center lg:justify-between">
-          <div className="flex flex-col lg:flex-row items-center lg:justify-start">
+    <div className="py-0 xl:py-5">
+      <div className="py-5 xl:py-10 px-0 mx-auto xl:px-20 transition-all 1s ease-in-out">
+        <div className="flex flex-col xl:flex-row w-full items-center xl:justify-between">
+          <div className="flex flex-col xl:flex-row items-center xl:justify-start">
             <Picture />
             <ContactArea />
           </div>
-          <div className="absolute block top-5 right-5 lg:flex lg:items-center lg:relative lg:top-[unset] lg:right-[unset]">
+          <div className="absolute block top-5 right-5 xl:flex xl:items-center xl:relative xl:top-[unset] xl:right-[unset]">
             <button
               className="border-none bg-transparent text-tblue dark:text-orange cursor-pointer transition-all 1s ease-in-out"
               onClick={onToggleDarkMode}

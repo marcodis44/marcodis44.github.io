@@ -3,11 +3,12 @@ import { actions } from "../store/store";
 import Header from "./Header";
 import Section from "./Section";
 import { AppState } from "../types/types";
-import CVSection from "./CVSection";
+import CvBody from "./CvBody";
+import Footer from "./Footer";
 
 const AppContainer = () => {
   const dispatch = useDispatch();
-  const { isDarkMode, contactInfo } = useSelector((state: AppState) => state);
+  const { isDarkMode } = useSelector((state: AppState) => state);
 
   const toggleDarkMode = () => {
     dispatch(actions.toggleDarkMode());
@@ -19,15 +20,9 @@ const AppContainer = () => {
         <div className={`w-3/4 mx-auto`}>
           <Header onToggleDarkMode={toggleDarkMode} />
           <hr className="border-tblue dark:border-light" />
-          <div className="flex">
-            <CVSection title="Personal Info">
-              <p>{contactInfo.personalInfo}</p>
-            </CVSection>
-
-            <CVSection title="Professional Experiences">
-              <p>{contactInfo.professionalExp}</p>
-            </CVSection>
-          </div>
+          <CvBody />
+          <hr className="border-tblue dark:border-light" />
+          <Footer />
         </div>
       </div>
     </div>

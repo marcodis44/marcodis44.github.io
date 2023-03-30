@@ -8,7 +8,7 @@ const Footer = () => {
   } = useSelector((state: AppState) => state);
 
   return (
-    <div className="flex flex-col lg:flex-row items-center py-4 w-fit mx-auto">
+    <div className="flex flex-col lg:flex-row items-center py-4 w-fit mx-auto lg:w-3/4 lg:justify-between">
       <div>
         <ContactDetail props={{ ...email }} />
       </div>

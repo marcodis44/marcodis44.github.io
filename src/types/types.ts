@@ -49,5 +49,6 @@ export interface ContactInfoProps {
 
 export interface AppState {
   isDarkMode: boolean;
+  language: "it" | "en";
   contactInfo: ContactInfoProps;
 }

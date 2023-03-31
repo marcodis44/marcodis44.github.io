@@ -13,6 +13,7 @@ import gbFlag from "../assets/gb 2.svg";
 
 const initialState: AppState = {
   isDarkMode: true,
+  language: "en",
   contactInfo: {
     name: "Marco",
     surname: "Dispoto",
@@ -47,7 +48,7 @@ const initialState: AppState = {
     },
     language: {
       it: {
-        level: "Madrelingua",
+        level: "Mother tongue",
         flag: itFlag,
         altText: "italian flag",
       },
@@ -137,6 +138,9 @@ const appSlice = createSlice({
   reducers: {
     toggleDarkMode(state) {
       state.isDarkMode = !state.isDarkMode;
+    },
+    switchLanguage(state, action) {
+      state.language = action.payload;
     },
   },
 });

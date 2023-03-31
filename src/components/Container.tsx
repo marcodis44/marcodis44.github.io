@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../store/store";
 import Header from "./Header";
-import Section from "./Section";
 import { AppState } from "../types/types";
 import CvBody from "./CvBody";
 import Footer from "./Footer";

@@ -13,7 +13,6 @@ import gbFlag from "../assets/gb 2.svg";
 
 const initialState: AppState = {
   isDarkMode: true,
-  language: "en",
   contactInfo: {
     name: "Marco",
     surname: "Dispoto",
@@ -138,9 +137,6 @@ const appSlice = createSlice({
   reducers: {
     toggleDarkMode(state) {
       state.isDarkMode = !state.isDarkMode;
-    },
-    switchLanguage(state, action) {
-      state.language = action.payload;
     },
   },
 });

@@ -15,13 +15,7 @@ import { actions } from "../store/store";
 
 const Header = ({ onToggleDarkMode }: { onToggleDarkMode: () => void }) => {
   const dispatch = useDispatch();
-  const { isDarkMode, language } = useSelector((state: AppState) => state);
-
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const handleSwitchLanguage = (lang: string) => {
-    dispatch(actions.switchLanguage(lang));
-  };
+  const { isDarkMode } = useSelector((state: AppState) => state);
 
   return (
     <div className="py-0 xl:py-5">
@@ -32,9 +26,9 @@ const Header = ({ onToggleDarkMode }: { onToggleDarkMode: () => void }) => {
             <ContactArea />
           </div>
           <div
-            className={`absolute flex flex-col top-5 right-5 xl:top-1/2 xl:-translate-x-1/2 xl:right-0 border-2 border-tblue dark:border-light rounded-full p-3 justify-center`}
+            className={`absolute flex flex-col top-5 right-5 xl:top-1/2 xl:-translate-x-1/2 xl:right-0`}
           >
-            <button
+            {/* <button
               className="items-center text-tblue dark:text-light"
               style={{ justifySelf: "flex-end" }}
               onClick={() => setIsOpen(!isOpen)}
@@ -85,9 +79,9 @@ const Header = ({ onToggleDarkMode }: { onToggleDarkMode: () => void }) => {
                   </button>
                 )}
               </div>
-            )}
+            )} */}
 
-            {/* <button
+            <button
               className="border-none bg-transparent text-tblue dark:text-orange cursor-pointer transition-all 1s ease-in-out"
               onClick={onToggleDarkMode}
               style={{ justifySelf: "flex-end" }}
@@ -101,7 +95,7 @@ const Header = ({ onToggleDarkMode }: { onToggleDarkMode: () => void }) => {
               ) : (
                 <FontAwesomeIcon icon={faCircleHalfStroke} size="2x" />
               )}
-            </button> */}
+            </button>
           </div>
         </div>
       </div>

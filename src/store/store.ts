@@ -58,7 +58,7 @@ const initialState: AppState = {
       },
     },
     personalInfo:
-      "I'm a web developer with 2+ years of experience in web-app development. I'm quite curious and dynamic,and I'd like to specialize in front-end development. In the last couple of months I have had the opportunity to get to know and use ReactJS with RTK, Styled-Components and TailwindCSS but I also have a good grasp on Bootstrap.",
+      "I'm a web developer with 2+ years of experience in web-app development. I'm quite curious and dynamic, and I'd like to specialize in front-end development. In the last couple of months I have had the opportunity to get to know and use ReactJS with RTK, Styled-Components and TailwindCSS but I also have a good grasp on Bootstrap.",
     professionalExp: [
       {
         title: "Web Developer",

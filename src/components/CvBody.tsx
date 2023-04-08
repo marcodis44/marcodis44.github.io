@@ -12,12 +12,12 @@ const CvBody = () => {
       <div className="flex w-full flex-col lg:flex-row">
         <div className="flex flex-col justify-between w-full lg:w-1/2">
           <CvSection title="Personal Info">
-            <p>{contactInfo.personalInfo}</p>
+            <p>{contactInfo?.personalInfo}</p>
           </CvSection>
 
           <CvSection title="Skills">
             <ul className="list-disc ml-5 pt-3 mb-8">
-              {contactInfo.skills.map((skill, i) => (
+              {contactInfo?.skills.map((skill, i) => (
                 <li key={i} className="text-tblue dark:text-light">
                   {skill}
                 </li>
@@ -28,7 +28,7 @@ const CvBody = () => {
 
         <div className="w-full lg:w-1/2">
           <CvSection title="Professional Experiences">
-            {contactInfo.professionalExp.map((exp, i) => (
+            {contactInfo?.professionalExp.map((exp, i) => (
               <WorkExperience props={{ ...exp }} key={i} />
             ))}
           </CvSection>
@@ -36,13 +36,13 @@ const CvBody = () => {
       </div>
       <div className="flex w-full flex-col lg:flex-row">
         <CvSection title="Courses and certifications">
-          {contactInfo.courses.map((course, i) => (
+          {contactInfo?.courses.map((course, i) => (
             <Education props={{ ...course }} key={i} />
           ))}
         </CvSection>
 
         <CvSection title="Education">
-          {contactInfo.education.map((education, i) => (
+          {contactInfo?.education.map((education, i) => (
             <Education props={{ ...education }} key={i} />
           ))}
         </CvSection>

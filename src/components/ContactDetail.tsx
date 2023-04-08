@@ -1,14 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { HeaderProp } from "../types/types";
+import { config } from "../config/config";
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 const ContactDetail = ({ props }: { props: HeaderProp }) => {
   const getChildren = () => {
     return (
       <div className="flex items-center">
-        <FontAwesomeIcon
-          icon={props.icon}
-          className="text-tblue dark:text-light"
-        />
+        {props.icon && (
+          <FontAwesomeIcon
+            icon={config.iconsMapping[props.icon] as IconDefinition}
+            className="text-tblue dark:text-light"
+          />
+        )}
         <p className="pl-3">{props.showValue}</p>
       </div>
     );

@@ -2,9 +2,9 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 export interface HeaderProp {
   showValue: string;
-  icon: IconDefinition;
+  icon: string | null;
   value: string;
-  wrapElement: "a" | "div";
+  wrapElement: "a" | "div" | null;
   action: "tel" | "mailto" | null;
 }
 
@@ -49,5 +49,9 @@ export interface ContactInfoProps {
 
 export interface AppState {
   isDarkMode: boolean;
-  contactInfo: ContactInfoProps;
+  contactInfo: ContactInfoProps | null;
+}
+
+export interface IconMappings {
+  [key: string]: IconDefinition;
 }

@@ -1,17 +1,22 @@
-import { useDispatch, useSelector } from "react-redux";
-import { actions } from "../store/store";
+import { useSelector } from "react-redux";
+import { actions, fetchContactInfo, useAppDispatch } from "../store/store";
 import Header from "./Header";
 import { AppState } from "../types/types";
 import CvBody from "./CvBody";
 import Footer from "./Footer";
+import { useEffect } from "react";
 
 const AppContainer = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const { isDarkMode } = useSelector((state: AppState) => state);
 
   const toggleDarkMode = () => {
     dispatch(actions.toggleDarkMode());
   };
+
+  useEffect(() => {
+    dispatch(fetchContactInfo());
+  }, []);
 
   return (
     <div className={`w-screen ${isDarkMode ? "dark" : ""}`}>
